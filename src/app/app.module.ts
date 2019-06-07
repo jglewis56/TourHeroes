@@ -13,6 +13,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { AccordionElementComponent } from './accordion-element/accordion-element.component';
 import { AccordionComponent } from './accordion/accordion.component';
+import { TypeComponent } from './type/type.component';
+import { GeneralAndBudgetInformationComponent } from './general-and-budget-information/general-and-budget-information.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { AccordionComponent } from './accordion/accordion.component';
     DashboardComponent,
 
     AccordionElementComponent,
-    AccordionComponent
+    AccordionComponent,
+    TypeComponent,
+    GeneralAndBudgetInformationComponent
   ],
   imports: [
     BrowserModule,
