@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 
 @Component({
   selector: 'app-accordion-element',
@@ -6,14 +6,14 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./accordion-element.component.css']
 })
 export class AccordionElementComponent implements OnInit {
-  open:boolean = false;
+  open = false;
+  @Input() title: string;
   @Output() opened = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
   }
   _openCloseClicked() {
-    console.log("hello World");
     this.open = !this.open;
     if (this.open) {
       this.opened.emit();

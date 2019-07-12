@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { TypeCodeService } from './../type-code.service';
+import { WorkOrderProposal } from './../WorkOrderProposals';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-type',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./type.component.css']
 })
 export class TypeComponent implements OnInit {
-
-  constructor() { }
+  @Input() _proposal: WorkOrderProposal;
+  constructor(private typeCodeServe: TypeCodeService) { }
 
   ngOnInit() {
+    this.typeCodeServe.updateView(this._proposal);
+  }
+
+  updateView(): void {
+    this.typeCodeServe.updateView(this._proposal);
   }
 
 }

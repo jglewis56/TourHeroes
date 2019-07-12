@@ -1,15 +1,47 @@
-<app-accordion-element (opened)="opened()">
-  <app-type></app-type>
-</app-accordion-element>
-<app-accordion-element (opened)="opened()">
-  <app-general-and-budget-information></app-general-and-budget-information>
-</app-accordion-element>
-<app-accordion-element (opened)="opened()">
-  <h1>Hello World</h1>
-</app-accordion-element>
-<app-accordion-element (opened)="opened()">
-  <h1>Hello World</h1>
-</app-accordion-element>
-<app-accordion-element (opened)="opened()">
-  <h1>Hello World</h1>
-</app-accordion-element>
+<div *ngIf="_proposal.isType">
+  <app-accordion-element (opened)="opened()" title = "Type">
+    <app-type [_proposal]="_proposal"></app-type>
+  </app-accordion-element>
+</div>
+
+<div *ngIf="_proposal.isGeneral">
+  <app-accordion-element (opened)="opened()" title = "General">
+    <app-general-and-budget-information></app-general-and-budget-information>
+  </app-accordion-element>
+</div>
+
+<div *ngIf="_proposal.isDescription">
+  <app-accordion-element (opened)="opened()"title = "Description">
+    <app-description-of-work-to-performed-and-justification></app-description-of-work-to-performed-and-justification>
+  </app-accordion-element>
+</div>
+
+<div *ngIf="_proposal.isInvestment">
+  <app-accordion-element (opened)="opened()" title = "Investment">
+    <h1>Hello World</h1>
+  </app-accordion-element>
+</div>
+
+<div *ngIf="_proposal.isExpenditures">
+  <app-accordion-element (opened)="opened()"title = "Expenditures">
+    <h1>Hello World</h1>
+  </app-accordion-element>
+</div>
+
+<div *ngIf="_proposal.isRetirement">
+  <app-accordion-element (opened)="opened()"title = "Retirement">
+    <h1>Hello World</h1>
+  </app-accordion-element>
+</div>
+
+<div *ngIf="_proposal.isMaintenance">
+  <app-accordion-element (opened)="opened()"title = "Maintenance">
+    <h1>Hello World</h1>
+  </app-accordion-element>
+</div>
+
+<div *ngIf="_proposal.isClearing">
+  <app-accordion-element (opened)="opened()"title = "Clearing">
+    <h1>Hello World</h1>
+  </app-accordion-element>
+</div>

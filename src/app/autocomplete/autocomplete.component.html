@@ -1,0 +1,6 @@
+<input #textbox type="text" class="textbox" [(ngModel)]="textboxValue" (focus)="textboxFocus()" (blur)="textboxBlur()"/>
+<span class="option-list" *ngIf="optionsOpen" [ngStyle]="{'width.px': optionsWidth, 'height.px': optionsHeight, 'top.px': optionsYPos, 'left.px': optionsXPos}">
+  <span class="option-list-styling">
+    <p>Options</p>
+  </span>
+</span>

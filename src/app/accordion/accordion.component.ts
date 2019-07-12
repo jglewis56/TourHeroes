@@ -1,3 +1,4 @@
+import { WorkOrderProposal } from './../WorkOrderProposals';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,13 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./accordion.component.css']
 })
 export class AccordionComponent implements OnInit {
-
-  constructor() { }
+  _proposal: WorkOrderProposal;
+  constructor() {
+    this._proposal = new WorkOrderProposal();
+    this._proposal.TypeCode = '1';
+   }
 
   ngOnInit() {
   }
   opened() {
-    console.log("Opened");
+    console.log('Opened');
   }
 
 }

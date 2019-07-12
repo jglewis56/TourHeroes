@@ -15,6 +15,10 @@ import { AccordionElementComponent } from './accordion-element/accordion-element
 import { AccordionComponent } from './accordion/accordion.component';
 import { TypeComponent } from './type/type.component';
 import { GeneralAndBudgetInformationComponent } from './general-and-budget-information/general-and-budget-information.component';
+import { DescriptionOfWorkToPerformedAndJustificationComponent } from './description-of-work-to-performed-and-justification/description-of-work-to-performed-and-justification.component';
+import { TempComponent } from './temp/temp.component';
+import { AutocompleteComponent } from './autocomplete/autocomplete.component';
+import { MyhighlighterDirective } from './myhighlighter.directive';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { GeneralAndBudgetInformationComponent } from './general-and-budget-infor
     AccordionElementComponent,
     AccordionComponent,
     TypeComponent,
-    GeneralAndBudgetInformationComponent
+    GeneralAndBudgetInformationComponent,
+    DescriptionOfWorkToPerformedAndJustificationComponent,
+    TempComponent,
+    AutocompleteComponent,
+    MyhighlighterDirective
   ],
   imports: [
     BrowserModule,
